@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Receita</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-4">
+        <h2 class="text-center mb-4">Adicionar Receita</h2>
+        
+        <form>
+            <div class="form-group">
+                <label for="tipoReceita">Tipo de Receita</label>
+                <select class="form-control" id="tipoReceita">
+                    <option>Salário</option>
+                    <option>Investimento</option>
+                    <option>Presente</option>
+                    <option>Freelance</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="valorReceita">Valor</label>
+                <input type="number" class="form-control" id="valorReceita" placeholder="Digite o valor">
+            </div>
+            
+            <button type="button" class="btn btn-success btn-block" onclick="adicionarReceita()">Adicionar Receita</button>
+        </form>
+    </div>
+
+    <script>
+        function adicionarReceita() {
+            const tipoReceita = document.getElementById('tipoReceita').value;
+            const valorReceita = parseFloat(document.getElementById('valorReceita').value);
+            
+            if (!isNaN(valorReceita) && valorReceita > 0) {
+                alert(`Receita de R$ ${valorReceita.toFixed(2)} adicionada com sucesso como ${tipoReceita}.`);
+                
+                // Redirecionar para a tela de home
+                window.location.href = "home.html"; // Substitua "index.html" pelo caminho correto da tela Home
+            } else {
+                alert('Por favor, insira um valor válido.');
+            }
+        }
+    </script>
+</body>
+</html>

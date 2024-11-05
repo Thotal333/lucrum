@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucrum: Cadastro</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <form id="login-form">
+        <img class="logo" src="./image/L (1)-Photoroom.png" alt="Logo Lucrum">
+        <h1>Crie sua Conta no Lucrum</h1>
+
+        <div class="input name">
+            <input type="text" placeholder=" " required>
+            <label>Nome Completo</label>
+        </div>
+        
+        <div class="input birthdate">
+            <input type="date" placeholder=" " required>
+            <label>Data de Nascimento</label>
+        </div>
+        
+        <div class="input email">
+            <input type="email" placeholder=" " required>
+            <label>Email</label>
+        </div>
+        
+        <div class="input confirm-password">
+            <input type="password" placeholder=" " required>
+            <label>Senha</label>
+        </div>
+        
+
+        <div class="input confirm-password">
+            <input type="password" placeholder=" " required>
+            <label>Confirme sua Senha</label>
+        </div>
+
+        <button type="submit">
+            <svg viewBox="0 0 16 16">
+                <circle stroke-opacity=".1" cx="8" cy="8" r="6"></circle>
+                <circle class="load" cx="8" cy="8" r="6"></circle>
+            </svg>
+            <span><a href="./home.html">Cadastrar-se</a></span>
+        </button>
+
+        <div class="cadastro"></div>
+        <span class="singIn">Já tem conta?
+            <a href="./login.html">Faça login</a>
+        </span>
+    </form>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <!-- SVGs de linha e tick do arquivo de login -->
+    </svg>
+    <script src="./signup.js"></script>
+</body>
+</html>
